@@ -1,0 +1,16 @@
+# Repository for SOSA submission related to Demi God numbers in the Rubiks cube
+
+We use the solver from Elias Frantar (et al.): https://github.com/efrantar/rob-twophase
+
+To compile simply run `make`.
+
+To solve <N> cubes sampled uniformly at random, using at most <m> milliseconds per cube and <t> threads, run
+```
+./twophase -n <N> -m <m> -t <t>
+```
+
+This will result in a text file `sol.cubes`, containing stastitics and information for verification.
+
+The description of each scramble follows Kociemba's representation, as described in https://github.com/efrantar/rob-twophase/blob/master/src/face.h 
+
+The file `experiments.cubes` contains the information corresponding to the 500.000 random solves used in the paper.
